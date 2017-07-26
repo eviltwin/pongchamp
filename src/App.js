@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import styled, { keyframes } from 'styled-components';
-import logo from './ping-pong.svg';
+import logo from './pingpong.svg';
 import LeaderboardRow from './LeaderboardRow';
 import {
     BrowserRouter as Router,
