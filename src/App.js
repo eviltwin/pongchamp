@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components'
-import logo from './logo.svg';
+import logo from './pingpong.svg';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -33,10 +33,10 @@ class App extends Component {
       <Wrapper>
         <Header>
           <Logo src={logo} alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>ReactDojo London 26-07-2017</h2>
         </Header>
         <Intro>
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Welcome to ReactDojo London 26-07-2017 PingPong Battle Leadership Board
         </Intro>
       </Wrapper>
     );
