@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import styled, { keyframes } from 'styled-components'
-import logo from './logo.svg';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
 
+import styled, { keyframes } from 'styled-components';
+import logo from './ping-pong.svg';
+import LeaderboardRow from './LeaderboardRow';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
 
 const Wrapper = styled.div`
   text-align: center;
 `
 
 const Header = styled.div`
-  background-color: #222;
+  background-color: #3dd4aa;
   height: 150px;
   padding: 20px;
   color: white;
@@ -32,6 +33,11 @@ const Logo = styled.img`
   animation: ${logoSpin} infinite 20s linear;
   height: 80px;
 `
+const List = styled.ol`
+  padding: 1rem;
+  margin: 2rem;
+`
+
 
 const InputWrapper = styled.div`
     margin: 10px;
@@ -46,7 +52,7 @@ const Navigation = () => (
         <div>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/result">About</Link></li>
+        <li><Link to="/result">Add Result</Link></li>
           </ul>
 
           <hr/>
@@ -70,14 +76,20 @@ class App extends Component {
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
     <Header>
       <Logo src={logo} alt="logo" />
-  <h2>Welcome to Pong Champ App</h2>
+      <h2>PongChamps</h2>
     </Header>
     <Intro>
-      To get started, edit <code>src/App.js</code> and save to reload.
+      There can be only one Champion!
     </Intro>
+
+    <List>
+      <LeaderboardRow name="Graham" points="1000"/>
+      <LeaderboardRow name="Dom" points="990"/>
+      <LeaderboardRow name="Raj" points="988"/>
+      <LeaderboardRow name="Anders" points="10"/>
+    </List>
   </div>
 )
 
